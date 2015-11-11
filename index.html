@@ -50,6 +50,7 @@
 
                 var unid = response['data']['txs'][i]['txid'];
                 var unout = response['data']['txs'][i]['output_no'];
+		console.log (response['data']['txs'][i]);
 
 		console.log (unid, unout);
 
@@ -63,7 +64,9 @@
                 while (s.length < 76) s = s + '0';
                 console.log (s);
                 ret = bitcoin.script.fromASM ('OP_RETURN '+s);
-                txb.addOutput(ret, 8000)
+                txb.addOutput(ret, 500);
+		//txb.addOutput(pub, 1500);
+
 
                 txb.sign (0, upair);
 
