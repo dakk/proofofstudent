@@ -64,7 +64,7 @@
                 while (s.length < 76) s = s + '0';
                 console.log (s);
                 ret = bitcoin.script.fromASM ('OP_RETURN '+s);
-                txb.addOutput(ret, 500);
+                txb.addOutput(ret, 1500);
 		//txb.addOutput(pub, 1500);
 
 
